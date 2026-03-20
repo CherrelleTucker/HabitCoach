@@ -1,17 +1,53 @@
-# Python-generated files
+# Xcode
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+xcuserdata/
+
+# Xcode build artifacts
+build/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# React Native / Expo
+node_modules/
+dist/
+.expo/
+
+# Secrets & credentials
+*.mobileprovision
+google-service-account.json
+*.p8
+*.p12
+*.keystore
+*.cer
+
+# React Native iOS generated
+ios/Pods/
+ios/build/
+
+# macOS
+.DS_Store
+
+# Python (research/ directory)
 __pycache__/
 *.py[oc]
-build/
-dist/
-wheels/
 *.egg-info
-
-# Virtual environments
 .venv
-
-# Cache
-stocks/.cache/
-
-# Generated charts (except examples)
-*.png
-!stocks/examples/*.png

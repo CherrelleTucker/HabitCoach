@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HabitCoach - Timer Screen Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+
+  .label {
+    text-align: center;
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  /* ============ PHONE ============ */
+  .phone {
+    width: 290px;
+    height: 628px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    border: 2px solid #333;
+    position: relative;
+  }
+  .phone .notch {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 120px; height: 28px; background: #000; border-radius: 0 0 18px 18px; z-index: 10;
+  }
+  .phone .status-bar {
+    position: absolute; top: 4px; left: 20px; right: 20px;
+    display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; z-index: 5;
+  }
+
+  /* Direction A: Coach's Authority */
+  .theme-a { --bg: #F5F0EB; --primary: #1B2D4F; --accent: #D4932A; --secondary: #7A8199; --pill-bg: #E8E3DD; --card-bg: #fff; --destructive: #8B3A3A; }
+  /* Direction B: Active Recovery */
+  .theme-b { --bg: #F7F5F2; --primary: #0A5E5C; --accent: #E07A5F; --secondary: #6B8A89; --pill-bg: #E5EDEC; --card-bg: #fff; --destructive: #8B3A3A; }
+
+  .phone .screen {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    padding: 52px 16px 0;
+  }
+
+  /* Timer */
+  .timer-display {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 200;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+    color: var(--primary);
+    margin: 8px 0 2px;
+  }
+  .timer-sublabel {
+    text-align: center;
+    font-size: 12px;
+    color: var(--secondary);
+    margin-bottom: 14px;
+  }
+
+  /* Sections */
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+  .section-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--secondary);
+    margin-bottom: 6px;
+  }
+
+  /* Presets row */
+  .presets {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .preset {
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--pill-bg);
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .preset.active {
+    background: var(--primary);
+    color: var(--bg);
+  }
+  .preset.custom-active {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* Custom editor inline */
+  .custom-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: var(--pill-bg);
+    border-radius: 10px;
+  }
+  .custom-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  .custom-field .value {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .custom-field .unit {
+    font-size: 9px;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .custom-sep {
+    font-size: 18px;
+    color: var(--secondary);
+    font-weight: 300;
+  }
+
+  /* Variance */
+  .variance-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .variance-toggle {
+    width: 36px; height: 20px;
+    border-radius: 10px;
+    background: var(--accent);
+    position: relative;
+    flex-shrink: 0;
+  }
+  .variance-toggle .knob {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 2px; right: 2px;
+  }
+  .variance-toggle.off {
+    background: #ccc;
+  }
+  .variance-toggle.off .knob {
+    right: auto; left: 2px;
+  }
+  .variance-text {
+    font-size: 12px;
+    color: var(--primary);
+    flex: 1;
+  }
+  .variance-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  /* Cycles */
+  .cycles-row {
+    display: flex;
+    gap: 5px;
+  }
+  .cycle-pill {
+    padding: 5px 9px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 500;
+    background: var(--pill-bg);
+    color: var(--primary);
+    cursor: pointer;
+  }
+  .cycle-pill.active {
+    background: var(--primary);
+    color: var(--bg);
+  }
+
+  /* Start button */
+  .start-btn {
+    margin-top: auto;
+    padding: 14px;
+    border-radius: 14px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+  }
+
+  /* Tab bar */
+  .tab-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0 12px;
+    border-top: 1px solid #e0dbd5;
+  }
+  .tab {
+    font-size: 9px;
+    text-align: center;
+    color: var(--secondary);
+  }
+  .tab.active { color: var(--primary); font-weight: 600; }
+  .tab-icon { font-size: 16px; margin-bottom: 1px; }
+
+  /* ============ WATCH ============ */
+  .watch {
+    width: 162px;
+    height: 196px;
+    border-radius: 38px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    border: 3px solid #333;
+  }
+
+  /* Watch theme A */
+  .watch.theme-a .w-screen { background: #1B2D4F; color: #F5F0EB; --w-accent: #D4932A; --w-secondary: #8A9BBF; --w-destructive: #8B3A3A; }
+  .watch.theme-b .w-screen { background: #0A2E2D; color: #F7F5F2; --w-accent: #E07A5F; --w-secondary: #5FA8A6; --w-destructive: #8B3A3A; }
+
+  .w-screen {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 14px 10px;
+  }
+  .w-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+  .w-timer {
+    font-size: 30px;
+    font-weight: 200;
+    font-variant-numeric: tabular-nums;
+    color: var(--w-accent);
+  }
+  .w-sublabel {
+    font-size: 8px;
+    color: var(--w-secondary);
+    margin-bottom: 4px;
+  }
+  .w-info {
+    font-size: 9px;
+    color: var(--w-secondary);
+    margin-bottom: 8px;
+  }
+  .w-btn {
+    padding: 7px 32px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .w-btn.start { background: var(--w-accent); }
+  .w-btn.stop { background: var(--w-destructive); }
+
+  .w-progress {
+    display: flex;
+    gap: 3px;
+    margin: 6px 0;
+  }
+  .w-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--w-secondary);
+    opacity: 0.3;
+  }
+  .w-dot.filled { opacity: 1; background: var(--w-accent); }
+
+  /* ============ ACTIVE STATES ============ */
+  .active-timer .timer-display {
+    color: var(--accent);
+  }
+  .active-timer .start-btn {
+    background: var(--destructive);
+  }
+
+  .col { display: flex; flex-direction: column; gap: 16px; align-items: center; }
+
+  h2.dir-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  p.dir-sub {
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    max-width: 320px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== DIRECTION A ====== -->
+<div class="col">
+  <div>
+    <h2 class="dir-title">Coach's Authority</h2>
+    <p class="dir-sub">Navy + Amber</p>
+  </div>
+
+  <div style="display:flex; gap: 20px; align-items: flex-start;">
+    <!-- Phone: Setup State -->
+    <div class="phone theme-a">
+      <div class="notch"></div>
+      <div class="screen">
+
+        <div class="timer-display">00:00</div>
+        <div class="timer-sublabel">Ready to start</div>
+
+        <!-- Interval section -->
+        <div class="section">
+          <div class="section-label">Interval</div>
+          <div class="presets">
+            <div class="preset">30s</div>
+            <div class="preset active">1m</div>
+            <div class="preset">2m</div>
+            <div class="preset">5m</div>
+            <div class="preset">10m</div>
+            <div class="preset custom-active">Custom</div>
+          </div>
+          <div class="custom-row">
+            <div class="custom-field">
+              <div class="value">1</div>
+              <div class="unit">min</div>
+            </div>
+            <div class="custom-sep">:</div>
+            <div class="custom-field">
+              <div class="value">30</div>
+              <div class="unit">sec</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Variance section -->
+        <div class="section">
+          <div class="section-label">Randomize</div>
+          <div class="variance-row">
+            <div class="variance-toggle">
+              <div class="knob"></div>
+            </div>
+            <div class="variance-text">± variance</div>
+            <div class="variance-value">± 15s</div>
+          </div>
+        </div>
+
+        <!-- Cycles section -->
+        <div class="section">
+          <div class="section-label">End after</div>
+          <div class="cycles-row">
+            <div class="cycle-pill active">∞</div>
+            <div class="cycle-pill">5×</div>
+            <div class="cycle-pill">10×</div>
+            <div class="cycle-pill">15 min</div>
+            <div class="cycle-pill">30 min</div>
+            <div class="cycle-pill">1 hr</div>
+          </div>
+        </div>
+
+        <div class="start-btn">Start Session</div>
+
+        <div class="tab-bar">
+          <div class="tab active"><div class="tab-icon">⏱</div>Timer</div>
+          <div class="tab"><div class="tab-icon">📋</div>Profiles</div>
+          <div class="tab"><div class="tab-icon">🕐</div>History</div>
+          <div class="tab"><div class="tab-icon">⚙</div>Settings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watches -->
+    <div class="col" style="gap: 12px;">
+      <div class="label">Idle</div>
+      <!-- Watch: Setup -->
+      <div class="watch theme-a">
+        <div class="w-screen">
+          <div class="w-title">HabitCoach</div>
+          <div class="w-timer">01:30</div>
+          <div class="w-sublabel">± 15s · ∞ cycles</div>
+          <div class="w-btn start">Start</div>
+        </div>
+      </div>
+
+      <div class="label">Active</div>
+      <!-- Watch: Active -->
+      <div class="watch theme-a">
+        <div class="w-screen">
+          <div class="w-timer">03:42</div>
+          <div class="w-info">Next buzz in ~28s</div>
+          <div class="w-progress">
+            <div class="w-dot filled"></div>
+            <div class="w-dot filled"></div>
+            <div class="w-dot filled"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+          </div>
+          <div class="w-sublabel">3 of 10 reminders</div>
+          <div class="w-btn stop">Stop</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== DIRECTION B ====== -->
+<div class="col">
+  <div>
+    <h2 class="dir-title">Active Recovery</h2>
+    <p class="dir-sub">Teal + Coral</p>
+  </div>
+
+  <div style="display:flex; gap: 20px; align-items: flex-start;">
+    <!-- Phone: Setup State -->
+    <div class="phone theme-b">
+      <div class="notch"></div>
+      <div class="screen">
+
+        <div class="timer-display">00:00</div>
+        <div class="timer-sublabel">Ready to start</div>
+
+        <!-- Interval section -->
+        <div class="section">
+          <div class="section-label">Interval</div>
+          <div class="presets">
+            <div class="preset">30s</div>
+            <div class="preset active">1m</div>
+            <div class="preset">2m</div>
+            <div class="preset">5m</div>
+            <div class="preset">10m</div>
+            <div class="preset custom-active">Custom</div>
+          </div>
+          <div class="custom-row">
+            <div class="custom-field">
+              <div class="value">1</div>
+              <div class="unit">min</div>
+            </div>
+            <div class="custom-sep">:</div>
+            <div class="custom-field">
+              <div class="value">30</div>
+              <div class="unit">sec</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Variance section -->
+        <div class="section">
+          <div class="section-label">Randomize</div>
+          <div class="variance-row">
+            <div class="variance-toggle">
+              <div class="knob"></div>
+            </div>
+            <div class="variance-text">± variance</div>
+            <div class="variance-value">± 15s</div>
+          </div>
+        </div>
+
+        <!-- Cycles section -->
+        <div class="section">
+          <div class="section-label">End after</div>
+          <div class="cycles-row">
+            <div class="cycle-pill active">∞</div>
+            <div class="cycle-pill">5×</div>
+            <div class="cycle-pill">10×</div>
+            <div class="cycle-pill">15 min</div>
+            <div class="cycle-pill">30 min</div>
+            <div class="cycle-pill">1 hr</div>
+          </div>
+        </div>
+
+        <div class="start-btn">Start Session</div>
+
+        <div class="tab-bar">
+          <div class="tab active"><div class="tab-icon">⏱</div>Timer</div>
+          <div class="tab"><div class="tab-icon">📋</div>Profiles</div>
+          <div class="tab"><div class="tab-icon">🕐</div>History</div>
+          <div class="tab"><div class="tab-icon">⚙</div>Settings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watches -->
+    <div class="col" style="gap: 12px;">
+      <div class="label">Idle</div>
+      <div class="watch theme-b">
+        <div class="w-screen">
+          <div class="w-title">HabitCoach</div>
+          <div class="w-timer">01:30</div>
+          <div class="w-sublabel">± 15s · ∞ cycles</div>
+          <div class="w-btn start">Start</div>
+        </div>
+      </div>
+
+      <div class="label">Active</div>
+      <div class="watch theme-b">
+        <div class="w-screen">
+          <div class="w-timer">03:42</div>
+          <div class="w-info">Next buzz in ~28s</div>
+          <div class="w-progress">
+            <div class="w-dot filled"></div>
+            <div class="w-dot filled"></div>
+            <div class="w-dot filled"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+            <div class="w-dot"></div>
+          </div>
+          <div class="w-sublabel">3 of 10 reminders</div>
+          <div class="w-btn stop">Stop</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

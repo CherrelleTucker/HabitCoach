@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "HabitCoach",
+    "slug": "HabitCoach",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F0F1A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ctuckersolutions.habitcoach"
+    },
+    "android": {
+      "package": "com.ctuckersolutions.habitcoach",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F0F1A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f8b3538a-342f-4843-87e8-9b9d32036b9b"
+      }
+    },
+    "owner": "cjtucker"
+  }
+}

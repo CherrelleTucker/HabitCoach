@@ -1,0 +1,85 @@
+name: HabitCoach
+options:
+  bundleIdPrefix: com.ctuckersolutions
+  deploymentTarget:
+    iOS: "17.0"
+    watchOS: "10.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: TJAC78FFA8
+
+targets:
+  HabitCoach:
+    type: application
+    platform: iOS
+    scheme:
+      storeKitConfiguration: HabitCoach/StoreKit.storekit
+      testTargets:
+        - HabitCoachTests
+    sources:
+      - path: HabitCoach
+        excludes:
+          - "**/.DS_Store"
+      - path: Shared
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ctuckersolutions.habitcoach
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: true
+        INFOPLIST_KEY_CFBundleDisplayName: HabitCoach
+        INFOPLIST_FILE: HabitCoach/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    entitlements:
+      path: HabitCoach/HabitCoach.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+
+  HabitCoachTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: HabitCoachTests
+        excludes:
+          - "**/.DS_Store"
+      - path: Shared
+        excludes:
+          - "**/.DS_Store"
+    dependencies:
+      - target: HabitCoach
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ctuckersolutions.habitcoach.tests
+        GENERATE_INFOPLIST_FILE: true
+
+  HabitCoachWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - path: HabitCoachWatch
+        excludes:
+          - "**/.DS_Store"
+      - path: Shared
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ctuckersolutions.habitcoach.watch
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: true
+        INFOPLIST_KEY_CFBundleDisplayName: HabitCoach
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.ctuckersolutions.habitcoach
+        INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp: true
+        INFOPLIST_KEY_NSHealthShareUsageDescription: "HabitCoach uses HealthKit workout sessions to deliver haptic reminders while your wrist is down."
+        INFOPLIST_KEY_NSHealthUpdateUsageDescription: "HabitCoach saves your coaching sessions as workouts to keep reminders active in the background."
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    entitlements:
+      path: HabitCoachWatch/HabitCoachWatch.entitlements
+      properties:
+        com.apple.developer.healthkit: true

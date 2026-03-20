@@ -1,22 +1,50 @@
-# Guidelines
+# HabitCoach Development Guidelines
 
-Before starting work, read the relevant guidelines:
+## Project
 
-- **Researching a topic?** → Read [RESEARCH_GUIDELINES.md](RESEARCH_GUIDELINES.md)
-- **Writing Python code?** → Read [PYTHON_GUIDELINES.md](PYTHON_GUIDELINES.md)
-- **Committing changes?** → Read [GIT_GUIDELINES.md](GIT_GUIDELINES.md)
-- **Logging a conversation?** → Read [CHAT_LOG_GUIDELINES.md](CHAT_LOG_GUIDELINES.md)
+iOS + Apple Watch haptic reminder app. Swift/SwiftUI, MVVM architecture.
 
-## Examples
+- **iOS target**: HabitCoach (iOS 17+)
+- **watchOS target**: HabitCoachWatch (watchOS 10+)
+- **Bundle ID**: com.ctuckersolutions.habitcoach
 
-"Research the best cloud providers for small startups"
-→ Read RESEARCH_GUIDELINES.md, create background.md, gather sources, write report
+## Architecture
 
-"Build a script to analyze CSV data"
-→ Read PYTHON_GUIDELINES.md, write README first, use uv, keep it modular
+- **Pattern**: MVVM with SwiftUI
+- **Shared code**: `Shared/` directory has target membership in both iOS and watchOS targets
+- **Models**: Plain structs conforming to `Codable` and `Identifiable`
+- **ViewModels**: `@Observable` classes (iOS 17+ Observation framework)
+- **Services**: Singleton or injected service classes wrapping Apple frameworks
 
-"Commit what we just worked on"
-→ Read GIT_GUIDELINES.md, stage files first, wait for review, then commit
+## Conventions
 
-"Log our conversation"
-→ Read CHAT_GUIDELINES.md, update chat_messages.md with user's messages
+- Views in `Views/` directories per target
+- ViewModels suffixed with `ViewModel`
+- Services suffixed with `Service` or `Manager`
+- No third-party dependencies — Apple frameworks only
+
+## Key Services
+
+| Service | Purpose |
+|---------|---------|
+| `WorkoutManager` | HealthKit workout session for background execution on Watch |
+| `HapticService` | WKHapticType playback on Watch |
+| `TimerService` | Core interval timer logic (shared) |
+| `ConnectivityService` | WatchConnectivity iPhone ↔ Watch sync |
+| `PersistenceService` | SwiftData (iOS) / UserDefaults (watchOS) |
+
+## Build & Run
+
+- Open `HabitCoach/HabitCoach.xcodeproj` in Xcode 16+
+- Select scheme: HabitCoach (iOS) or HabitCoachWatch (watchOS)
+- Cmd+R to run
+
+## Committing
+
+See [GIT_GUIDELINES.md](GIT_GUIDELINES.md) for commit conventions.
+
+## Research Reference
+
+- `research/habit-reminder-wearable/report.md` — full technical feasibility study
+- `research/habit-reminder-wearable/client_feasibility_report.md` — client-facing report
+- `research/habit-reminder-wearable/requirements.md` — core requirements

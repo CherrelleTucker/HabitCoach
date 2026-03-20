@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HabitCoach - Brand Direction Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif; background: #111; color: #fff; }
+
+  h1.section-title {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    padding: 40px 0 20px;
+  }
+
+  .direction {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 40px 60px;
+    flex-wrap: wrap;
+  }
+
+  /* ============ PHONE MOCKUP ============ */
+  .phone {
+    width: 280px;
+    height: 580px;
+    border-radius: 36px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .phone .notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 28px;
+    background: #000;
+    border-radius: 0 0 18px 18px;
+    z-index: 10;
+  }
+  .phone .screen {
+    width: 100%;
+    height: 100%;
+    padding: 48px 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ============ WATCH MOCKUP ============ */
+  .watch {
+    width: 156px;
+    height: 190px;
+    border-radius: 36px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    border: 3px solid #333;
+  }
+  .watch .screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  /* ============ SWATCHES ============ */
+  .swatches {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: center;
+    padding-top: 20px;
+  }
+  .swatch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: #aaa;
+  }
+  .swatch .dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+  }
+
+  /* ============ DIRECTION A: Coach's Authority ============ */
+  .dir-a .phone .screen {
+    background: #F5F0EB;
+    color: #1B2D4F;
+  }
+  .dir-a .phone .nav-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1B2D4F;
+    margin-bottom: 24px;
+  }
+  .dir-a .phone .timer-display {
+    font-size: 56px;
+    font-weight: 200;
+    text-align: center;
+    color: #1B2D4F;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+    margin: 16px 0 4px;
+  }
+  .dir-a .phone .timer-label {
+    text-align: center;
+    font-size: 13px;
+    color: #7A8199;
+    margin-bottom: 20px;
+  }
+  .dir-a .phone .interval-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+  .dir-a .phone .interval-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7A8199;
+    margin-bottom: 8px;
+  }
+  .dir-a .phone .interval-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .dir-a .phone .pill {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    background: #E8E3DD;
+    color: #1B2D4F;
+  }
+  .dir-a .phone .pill.active {
+    background: #1B2D4F;
+    color: #F5F0EB;
+  }
+  .dir-a .phone .start-btn {
+    margin-top: auto;
+    padding: 16px;
+    border-radius: 14px;
+    background: #D4932A;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  .dir-a .phone .tab-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 4px;
+    border-top: 1px solid #E0DBD5;
+    margin-top: 12px;
+  }
+  .dir-a .phone .tab {
+    font-size: 10px;
+    text-align: center;
+    color: #7A8199;
+  }
+  .dir-a .phone .tab.active { color: #D4932A; }
+  .dir-a .phone .tab-icon {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+
+  /* Watch A */
+  .dir-a .watch .screen {
+    background: #1B2D4F;
+    color: #F5F0EB;
+  }
+  .dir-a .watch .watch-time {
+    font-size: 32px;
+    font-weight: 200;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+  }
+  .dir-a .watch .watch-label {
+    font-size: 10px;
+    color: #8A9BBF;
+    margin: 4px 0 12px;
+  }
+  .dir-a .watch .watch-btn {
+    padding: 8px 28px;
+    border-radius: 20px;
+    background: #D4932A;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .dir-a .watch .watch-interval {
+    font-size: 10px;
+    color: #8A9BBF;
+    margin-top: 8px;
+  }
+
+  /* ============ DIRECTION B: Active Recovery ============ */
+  .dir-b .phone .screen {
+    background: #F7F5F2;
+    color: #1A2A2A;
+  }
+  .dir-b .phone .nav-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0A5E5C;
+    margin-bottom: 24px;
+  }
+  .dir-b .phone .timer-display {
+    font-size: 56px;
+    font-weight: 200;
+    text-align: center;
+    color: #0A5E5C;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+    margin: 16px 0 4px;
+  }
+  .dir-b .phone .timer-label {
+    text-align: center;
+    font-size: 13px;
+    color: #6B8A89;
+    margin-bottom: 20px;
+  }
+  .dir-b .phone .interval-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+  .dir-b .phone .interval-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6B8A89;
+    margin-bottom: 8px;
+  }
+  .dir-b .phone .interval-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .dir-b .phone .pill {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    background: #E5EDEC;
+    color: #1A2A2A;
+  }
+  .dir-b .phone .pill.active {
+    background: #0A5E5C;
+    color: #F7F5F2;
+  }
+  .dir-b .phone .start-btn {
+    margin-top: auto;
+    padding: 16px;
+    border-radius: 14px;
+    background: #E07A5F;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  .dir-b .phone .tab-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 4px;
+    border-top: 1px solid #DDD9D4;
+    margin-top: 12px;
+  }
+  .dir-b .phone .tab {
+    font-size: 10px;
+    text-align: center;
+    color: #6B8A89;
+  }
+  .dir-b .phone .tab.active { color: #E07A5F; }
+  .dir-b .phone .tab-icon {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+
+  /* Watch B */
+  .dir-b .watch .screen {
+    background: #0A2E2D;
+    color: #F7F5F2;
+  }
+  .dir-b .watch .watch-time {
+    font-size: 32px;
+    font-weight: 200;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+  }
+  .dir-b .watch .watch-label {
+    font-size: 10px;
+    color: #5FA8A6;
+    margin: 4px 0 12px;
+  }
+  .dir-b .watch .watch-btn {
+    padding: 8px 28px;
+    border-radius: 20px;
+    background: #E07A5F;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .dir-b .watch .watch-interval {
+    font-size: 10px;
+    color: #5FA8A6;
+    margin-top: 8px;
+  }
+
+  /* ============ ACTIVE SESSION STATE ============ */
+  .active-state {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 40px 60px;
+    flex-wrap: wrap;
+  }
+
+  /* Direction A active watch */
+  .dir-a .watch-active .screen {
+    background: #1B2D4F;
+  }
+  .dir-a .watch-active .watch-time {
+    font-size: 32px;
+    font-weight: 300;
+    color: #D4932A;
+    font-variant-numeric: tabular-nums;
+  }
+  .dir-a .watch-active .watch-count {
+    font-size: 11px;
+    color: #8A9BBF;
+    margin: 6px 0 14px;
+  }
+  .dir-a .watch-active .watch-btn {
+    padding: 8px 28px;
+    border-radius: 20px;
+    background: #8B3A3A;
+    color: #F5F0EB;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .dir-a .watch-active .pulse-ring {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #D4932A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    animation: pulse-a 2s ease-in-out infinite;
+  }
+  @keyframes pulse-a {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212,147,42,0.3); }
+    50% { box-shadow: 0 0 0 8px rgba(212,147,42,0); }
+  }
+
+  /* Direction B active watch */
+  .dir-b .watch-active .screen {
+    background: #0A2E2D;
+  }
+  .dir-b .watch-active .watch-time {
+    font-size: 32px;
+    font-weight: 300;
+    color: #E07A5F;
+    font-variant-numeric: tabular-nums;
+  }
+  .dir-b .watch-active .watch-count {
+    font-size: 11px;
+    color: #5FA8A6;
+    margin: 6px 0 14px;
+  }
+  .dir-b .watch-active .watch-btn {
+    padding: 8px 28px;
+    border-radius: 20px;
+    background: #8B3A3A;
+    color: #F7F5F2;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .dir-b .watch-active .pulse-ring {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #E07A5F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    animation: pulse-b 2s ease-in-out infinite;
+  }
+  @keyframes pulse-b {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(224,122,95,0.3); }
+    50% { box-shadow: 0 0 0 8px rgba(224,122,95,0); }
+  }
+
+  .divider {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid #333;
+  }
+
+  .label-tag {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .dir-a .label-tag { background: #1B2D4F; color: #D4932A; }
+  .dir-b .label-tag { background: #0A5E5C; color: #E07A5F; }
+
+  .dir-label {
+    text-align: center;
+    padding: 30px 0 0;
+  }
+  .dir-label h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .dir-label p {
+    font-size: 13px;
+    color: #888;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== DIRECTION A ==================== -->
+<div class="dir-a">
+  <div class="dir-label">
+    <span class="label-tag">Direction A</span>
+    <h2>Coach's Authority</h2>
+    <p>Deep navy + amber gold. Trust and authority with a warm, motivating nudge. Feels elite — at home with Olympic coaches and PTs.</p>
+  </div>
+
+  <div class="direction">
+    <!-- Phone -->
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="screen">
+        <div class="nav-title">HabitCoach</div>
+        <div class="timer-display">00:00</div>
+        <div class="timer-label">Ready to start</div>
+
+        <div class="interval-section">
+          <div class="interval-label">Remind every</div>
+          <div class="interval-pills">
+            <div class="pill">1 min</div>
+            <div class="pill">2 min</div>
+            <div class="pill">3 min</div>
+            <div class="pill active">5 min</div>
+            <div class="pill">10 min</div>
+            <div class="pill">15 min</div>
+          </div>
+        </div>
+
+        <div class="start-btn">Start Session</div>
+
+        <div class="tab-bar">
+          <div class="tab active">
+            <div class="tab-icon">⏱</div>
+            Timer
+          </div>
+          <div class="tab">
+            <div class="tab-icon">📋</div>
+            Profiles
+          </div>
+          <div class="tab">
+            <div class="tab-icon">🕐</div>
+            History
+          </div>
+          <div class="tab">
+            <div class="tab-icon">⚙</div>
+            Settings
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watch idle -->
+    <div>
+      <div class="watch">
+        <div class="screen">
+          <div class="watch-time">00:00</div>
+          <div class="watch-label">Every 5 min</div>
+          <div class="watch-btn">Start</div>
+        </div>
+      </div>
+
+      <!-- Watch active -->
+      <div style="margin-top: 20px;">
+        <div class="watch watch-active">
+          <div class="screen">
+            <div class="pulse-ring">
+              <div class="watch-time">03:42</div>
+            </div>
+            <div class="watch-count">2 reminders sent</div>
+            <div class="watch-btn">Stop</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch"><div class="dot" style="background:#1B2D4F"></div> Navy #1B2D4F</div>
+        <div class="swatch"><div class="dot" style="background:#D4932A"></div> Amber #D4932A</div>
+        <div class="swatch"><div class="dot" style="background:#F5F0EB"></div> Ivory #F5F0EB</div>
+        <div class="swatch"><div class="dot" style="background:#2E8B57"></div> Success #2E8B57</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ==================== DIRECTION B ==================== -->
+<div class="dir-b">
+  <div class="dir-label">
+    <span class="label-tag">Direction B</span>
+    <h2>Active Recovery</h2>
+    <p>Deep teal + warm coral. Calm clinical expertise with an energizing correction nudge. Bridges the wellness and performance worlds.</p>
+  </div>
+
+  <div class="direction">
+    <!-- Phone -->
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="screen">
+        <div class="nav-title">HabitCoach</div>
+        <div class="timer-display">00:00</div>
+        <div class="timer-label">Ready to start</div>
+
+        <div class="interval-section">
+          <div class="interval-label">Remind every</div>
+          <div class="interval-pills">
+            <div class="pill">1 min</div>
+            <div class="pill">2 min</div>
+            <div class="pill">3 min</div>
+            <div class="pill active">5 min</div>
+            <div class="pill">10 min</div>
+            <div class="pill">15 min</div>
+          </div>
+        </div>
+
+        <div class="start-btn">Start Session</div>
+
+        <div class="tab-bar">
+          <div class="tab active">
+            <div class="tab-icon">⏱</div>
+            Timer
+          </div>
+          <div class="tab">
+            <div class="tab-icon">📋</div>
+            Profiles
+          </div>
+          <div class="tab">
+            <div class="tab-icon">🕐</div>
+            History
+          </div>
+          <div class="tab">
+            <div class="tab-icon">⚙</div>
+            Settings
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watch idle -->
+    <div>
+      <div class="watch">
+        <div class="screen">
+          <div class="watch-time">00:00</div>
+          <div class="watch-label">Every 5 min</div>
+          <div class="watch-btn">Start</div>
+        </div>
+      </div>
+
+      <!-- Watch active -->
+      <div style="margin-top: 20px;">
+        <div class="watch watch-active">
+          <div class="screen">
+            <div class="pulse-ring">
+              <div class="watch-time">03:42</div>
+            </div>
+            <div class="watch-count">2 reminders sent</div>
+            <div class="watch-btn">Stop</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch"><div class="dot" style="background:#0A5E5C"></div> Teal #0A5E5C</div>
+        <div class="swatch"><div class="dot" style="background:#E07A5F"></div> Coral #E07A5F</div>
+        <div class="swatch"><div class="dot" style="background:#F7F5F2"></div> Warm White #F7F5F2</div>
+        <div class="swatch"><div class="dot" style="background:#4A9B7F"></div> Success #4A9B7F</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

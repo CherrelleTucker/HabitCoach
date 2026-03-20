@@ -1,0 +1,855 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06079F31956F06F13EBE5B2B /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DEBA9073FECDD5CA4A5902 /* SessionStore.swift */; };
+		060F2C9C33B9F61DAB023B1C /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DB634ABE8381D9F3D8037F /* HapticService.swift */; };
+		1174EDBDEB885560C9DD46DE /* SessionProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CDAAA553781211886299B1 /* SessionProfileTests.swift */; };
+		118505D045F45A2E6B016108 /* PremiumFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B254C9C67EC050AD1DF1A /* PremiumFeature.swift */; };
+		178C8FB165F1ED13F4610558 /* SessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB93D531C4F726C0AFE4A1F /* SessionSettings.swift */; };
+		183DCDBE38E705E06D55DFAD /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C514AF87C85D3CAAE004B /* SessionHistoryView.swift */; };
+		1B07747E38D16252196499B3 /* SequenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2775F4634E942BC8629EE0 /* SequenceStore.swift */; };
+		1E85A92228C7896E84CD0C3F /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731394DB1549E2653685599 /* ProfileListView.swift */; };
+		2131F136B880CE959E5FB764 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89587665CFCBB375AF3C4F /* SettingsView.swift */; };
+		213DB74577729ACD3061D41B /* SequenceTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE157D432CEE5CA89ABF71D5 /* SequenceTimerViewModel.swift */; };
+		2143193E036DD9C6C62F7F0F /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DEBA9073FECDD5CA4A5902 /* SessionStore.swift */; };
+		21E2E353FE60F921A3D37F91 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153D191CB58BB8273825621 /* Session.swift */; };
+		2DC708A64E92EF2D2C104BBD /* HabitCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579BD49BAA601A230CCFDC0B /* HabitCoachApp.swift */; };
+		2DC767B35138310FB6E539DD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B26A0109C6B9FC54FB37A5 /* AppTheme.swift */; };
+		2E45A8899ED528FA66AB058C /* MorsePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EAE9514A2F2A95B3F4A71C /* MorsePlayer.swift */; };
+		33AA852C26C3B7FB87ECE531 /* SessionSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA559278D656B1884795C1D4 /* SessionSettingsTests.swift */; };
+		34AE0DE1D7C5A88ECEB6F796 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674048A45327CB76815739F /* TimerService.swift */; };
+		3DD397F466C42C732D35570C /* SessionProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550C13F30044BF3E3DAA0D9 /* SessionProfile.swift */; };
+		3E112C6C11E722244C5E5083 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB9A1579A13055B9CBF9C /* ThemeManager.swift */; };
+		3F6BE2396EE863948EEF3C49 /* TimerPresetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D73FD71E18DC8F256C3CAD /* TimerPresetPickerView.swift */; };
+		40D310F86B86C3F739B0B861 /* SessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB93D531C4F726C0AFE4A1F /* SessionSettings.swift */; };
+		45E9DF0C1FFD910B725CE8F7 /* SessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB93D531C4F726C0AFE4A1F /* SessionSettings.swift */; };
+		4A8C4E93C559AD10AA62EA42 /* SequenceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E3B62D1EF48CFC1E079411 /* SequenceListView.swift */; };
+		4F199B297D2365024E4AC169 /* TimerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6C339F09A987826C230BC /* TimerServiceTests.swift */; };
+		50FE3612C8492659481BE3B1 /* MorsePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EAE9514A2F2A95B3F4A71C /* MorsePlayer.swift */; };
+		5263AF8F96C15184456AAD4D /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C035D7419052E54813B2CC /* TimerViewModel.swift */; };
+		5572163EE87E365C37076FA6 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B26A0109C6B9FC54FB37A5 /* AppTheme.swift */; };
+		5575F4C7FEB1F682BD6F301F /* HapticPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D68187CF517F6F070A610E /* HapticPattern.swift */; };
+		56A60E10215A4F761224684A /* ConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD075C4990DCE1D3B032CEBB /* ConnectivityService.swift */; };
+		5A5722C41DE6C1D545D3DD71 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8CB6B19E346D70F883826 /* ProfileStore.swift */; };
+		5B95DB073BCBCE4538A9FB44 /* SessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D390A4FA43D63E0D2C40F586 /* SessionTests.swift */; };
+		5CC637C11AECE71A071C696E /* EndConditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E987E8FE9DC95C516D33AD7 /* EndConditionTests.swift */; };
+		5D5C2FFFE3C333E3C6467418 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898C9C883B38A359281A0BC /* WorkoutManager.swift */; };
+		5DB8A7D79D2F4DEB230E979D /* ConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD075C4990DCE1D3B032CEBB /* ConnectivityService.swift */; };
+		5FD008B0CBA54C5841BC1F1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE98A3159C1E9F88FB71A /* ContentView.swift */; };
+		62754A6AC83F5C20FDB47C34 /* SequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4733C52E1A1DC10DB17948 /* SequenceTests.swift */; };
+		67709513DCC45E5CE2D00E14 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4236C8ACC6F2C2ED1C77150A /* PrivacyInfo.xcprivacy */; };
+		6A610A2F3DA386DE20DED501 /* HapticPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D68187CF517F6F070A610E /* HapticPattern.swift */; };
+		6E32295D8A5C79657949A400 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC8A51DFCCE59D31B9DEB6 /* AudioService.swift */; };
+		6E5A145342B474A24D97E261 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898C9C883B38A359281A0BC /* WorkoutManager.swift */; };
+		6F6DE60907E8C5A9D1CD1CA3 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF5EE34206B20849CDB1FA /* PrivacyPolicyView.swift */; };
+		7461DBFA4DFD15BEA5E16672 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153D191CB58BB8273825621 /* Session.swift */; };
+		768B7AA67820E94ED6610A87 /* ConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD075C4990DCE1D3B032CEBB /* ConnectivityService.swift */; };
+		76E8A1705A7A2AA62F5BB536 /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DB634ABE8381D9F3D8037F /* HapticService.swift */; };
+		776519D85A627DFDC270E344 /* SequenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2775F4634E942BC8629EE0 /* SequenceStore.swift */; };
+		78E1C175447F031606C8325E /* PremiumFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B254C9C67EC050AD1DF1A /* PremiumFeature.swift */; };
+		79825A573CC29F08040CC70F /* SequenceTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF27EDC5CF66A20E6AC1D9B /* SequenceTimerView.swift */; };
+		7C7188882C6CB15E64731F49 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153D191CB58BB8273825621 /* Session.swift */; };
+		808B5C31608594D33D73CF6C /* SessionProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550C13F30044BF3E3DAA0D9 /* SessionProfile.swift */; };
+		832DB49C686847E8A7F37333 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8CB6B19E346D70F883826 /* ProfileStore.swift */; };
+		860BB2FE7E6EC50CFC51B558 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0204DA37F2010AC8D775996 /* ProfileEditView.swift */; };
+		8B8A5154B3EB151B17EF7EB7 /* SequenceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AF292D9A92CCB881279C5 /* SequenceEditView.swift */; };
+		8CCA39F49B2B964758A58699 /* MorsePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664EF3F851C6C9BE3B78B2E /* MorsePlayerTests.swift */; };
+		8D8449F898213680A932D883 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DEBA9073FECDD5CA4A5902 /* SessionStore.swift */; };
+		8F74963BAB14DB732E9F3C33 /* MorsePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EAE9514A2F2A95B3F4A71C /* MorsePlayer.swift */; };
+		95116D9CAF7F78218C9BBEE8 /* PremiumFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B254C9C67EC050AD1DF1A /* PremiumFeature.swift */; };
+		95EA9FE35D1946D43039F0FD /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D58EB4288C2BD173CA05B8 /* UpgradeView.swift */; };
+		9CC6394DF15F32FF718FD3A9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB9A1579A13055B9CBF9C /* ThemeManager.swift */; };
+		A61B0626BD232E462678C6FC /* HapticPatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384D60F15DFF9F28DAB57E3 /* HapticPatternTests.swift */; };
+		A62B14C76B678B7CF62378FA /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9532A15E15828E8021F74210 /* PurchaseManager.swift */; };
+		AA0495DF510892B83B042895 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC8A51DFCCE59D31B9DEB6 /* AudioService.swift */; };
+		AA9E584D2D8A25FD27625414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD7DFE9609A44FC0E58DD2E /* Assets.xcassets */; };
+		AAB748CB9FD6FE2AE1DEFDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2F4276F21F544B5E80C378 /* Assets.xcassets */; };
+		B7CDC19D94FDBDB1BA5C5DAA /* SequenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2775F4634E942BC8629EE0 /* SequenceStore.swift */; };
+		BB6D5C55E389DD86CFE1429E /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9532A15E15828E8021F74210 /* PurchaseManager.swift */; };
+		BE0D7C1E63E264530CC7E963 /* WatchPresetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F6D3FDBF1E0561D2E1D643 /* WatchPresetListView.swift */; };
+		C212D674154E2F011AA30D02 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F8CB6B19E346D70F883826 /* ProfileStore.swift */; };
+		C24929B64D62DF53086A0F65 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674048A45327CB76815739F /* TimerService.swift */; };
+		C5658A2651C9330A81800966 /* HapticPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D68187CF517F6F070A610E /* HapticPattern.swift */; };
+		C6F7FE5931EFD73850B13FA8 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898C9C883B38A359281A0BC /* WorkoutManager.swift */; };
+		C95BFE51482F6135BD8F3129 /* SessionProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1550C13F30044BF3E3DAA0D9 /* SessionProfile.swift */; };
+		CB8B9EA35D0C1B0AF4F7258B /* SessionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF141E92D9B2D99C32D269E3 /* SessionSequence.swift */; };
+		D070A41601A9C1252F68C05B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B26A0109C6B9FC54FB37A5 /* AppTheme.swift */; };
+		D139037BD3BC73FCDBF1191C /* SessionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF141E92D9B2D99C32D269E3 /* SessionSequence.swift */; };
+		DA255C75283E79AA4C61FC0C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4C430D42A37CF3B80330F914 /* PrivacyInfo.xcprivacy */; };
+		DC8C0C93861BBB3A1F2074DD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59798E4411EB5EB81B12B9ED /* TimerView.swift */; };
+		E4CBABDAF265AD2DD007D7B2 /* WatchTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C432AF981B4F25AB3A3F5E /* WatchTimerView.swift */; };
+		E5F12E64D57CDF4C2275DDF0 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674048A45327CB76815739F /* TimerService.swift */; };
+		EAA8370EECEB99B4E14F0298 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC8A51DFCCE59D31B9DEB6 /* AudioService.swift */; };
+		EB2F220ADC77A7AF91A4C04B /* SessionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF141E92D9B2D99C32D269E3 /* SessionSequence.swift */; };
+		EBF1A5C9C058FDEE626BF697 /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DB634ABE8381D9F3D8037F /* HapticService.swift */; };
+		EBF77422D8CEF9E55EA5C072 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9532A15E15828E8021F74210 /* PurchaseManager.swift */; };
+		EF8B44F5528C771C01F1CC49 /* WatchTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DDA2ED9087B740F81A7CE /* WatchTimerViewModel.swift */; };
+		F2547D7AFD62A0047F44F9F6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02541170D32D09D2053B8D7 /* OnboardingView.swift */; };
+		F265DEE555C3DBFC21776AE0 /* HabitCoachWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BD85C4C9CF52DF1BE85F1 /* HabitCoachWatchApp.swift */; };
+		F3387B23291142ED11776552 /* WatchSequenceTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A17BC4ECD810C5A0F8050B /* WatchSequenceTimerView.swift */; };
+		F39256D9336BA645A2EBF4E4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB9A1579A13055B9CBF9C /* ThemeManager.swift */; };
+		F4094E30B79D304AD0D5D692 /* StoreKit.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 159B4D07764F185C1EAB832F /* StoreKit.storekit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D51251802055A56E9FD20604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101140A7AACFD26920FC007E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0F30F48BCDD5A3668F94928;
+			remoteInfo = HabitCoach;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000E20EBB135A9D45306A0C3 /* HabitCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0731394DB1549E2653685599 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
+		08AF5EE34206B20849CDB1FA /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		0D6AF292D9A92CCB881279C5 /* SequenceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceEditView.swift; sourceTree = "<group>"; };
+		0E3BD85C4C9CF52DF1BE85F1 /* HabitCoachWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCoachWatchApp.swift; sourceTree = "<group>"; };
+		0F5DDA2ED9087B740F81A7CE /* WatchTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerViewModel.swift; sourceTree = "<group>"; };
+		1550C13F30044BF3E3DAA0D9 /* SessionProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProfile.swift; sourceTree = "<group>"; };
+		159B4D07764F185C1EAB832F /* StoreKit.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKit.storekit; sourceTree = "<group>"; };
+		17DEBA9073FECDD5CA4A5902 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		186FB9A1579A13055B9CBF9C /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		1CD7DFE9609A44FC0E58DD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21A17BC4ECD810C5A0F8050B /* WatchSequenceTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSequenceTimerView.swift; sourceTree = "<group>"; };
+		250705BE2579C896DF23785F /* HabitCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitCoach.entitlements; sourceTree = "<group>"; };
+		267F4C8278A17F4FFDA8D563 /* HabitCoachWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitCoachWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35CDAAA553781211886299B1 /* SessionProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProfileTests.swift; sourceTree = "<group>"; };
+		3EF27EDC5CF66A20E6AC1D9B /* SequenceTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceTimerView.swift; sourceTree = "<group>"; };
+		4236C8ACC6F2C2ED1C77150A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		4664EF3F851C6C9BE3B78B2E /* MorsePlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorsePlayerTests.swift; sourceTree = "<group>"; };
+		4C430D42A37CF3B80330F914 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		50DB634ABE8381D9F3D8037F /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticService.swift; sourceTree = "<group>"; };
+		5153D191CB58BB8273825621 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		55C035D7419052E54813B2CC /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		579BD49BAA601A230CCFDC0B /* HabitCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCoachApp.swift; sourceTree = "<group>"; };
+		58EAE9514A2F2A95B3F4A71C /* MorsePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorsePlayer.swift; sourceTree = "<group>"; };
+		59798E4411EB5EB81B12B9ED /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		61BC8A51DFCCE59D31B9DEB6 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		61D68187CF517F6F070A610E /* HapticPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticPattern.swift; sourceTree = "<group>"; };
+		6A4C514AF87C85D3CAAE004B /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
+		729141F0F0603EF3D8C491C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		76115EB7147F485F80B5F64F /* HabitCoachWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitCoachWatch.entitlements; sourceTree = "<group>"; };
+		77BFE98A3159C1E9F88FB71A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		78B26A0109C6B9FC54FB37A5 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		7F89587665CFCBB375AF3C4F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8384D60F15DFF9F28DAB57E3 /* HapticPatternTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticPatternTests.swift; sourceTree = "<group>"; };
+		83D73FD71E18DC8F256C3CAD /* TimerPresetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresetPickerView.swift; sourceTree = "<group>"; };
+		83F6D3FDBF1E0561D2E1D643 /* WatchPresetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPresetListView.swift; sourceTree = "<group>"; };
+		8E987E8FE9DC95C516D33AD7 /* EndConditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndConditionTests.swift; sourceTree = "<group>"; };
+		9532A15E15828E8021F74210 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		9B2775F4634E942BC8629EE0 /* SequenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceStore.swift; sourceTree = "<group>"; };
+		9E2F4276F21F544B5E80C378 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FA6C339F09A987826C230BC /* TimerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceTests.swift; sourceTree = "<group>"; };
+		A0204DA37F2010AC8D775996 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		A898C9C883B38A359281A0BC /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		A8E3B62D1EF48CFC1E079411 /* SequenceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceListView.swift; sourceTree = "<group>"; };
+		AA559278D656B1884795C1D4 /* SessionSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSettingsTests.swift; sourceTree = "<group>"; };
+		AD4733C52E1A1DC10DB17948 /* SequenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceTests.swift; sourceTree = "<group>"; };
+		AF141E92D9B2D99C32D269E3 /* SessionSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSequence.swift; sourceTree = "<group>"; };
+		B02541170D32D09D2053B8D7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B674048A45327CB76815739F /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		BAB93D531C4F726C0AFE4A1F /* SessionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSettings.swift; sourceTree = "<group>"; };
+		BD075C4990DCE1D3B032CEBB /* ConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityService.swift; sourceTree = "<group>"; };
+		C21669F0F6FA1166264AB565 /* HabitCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C432AF981B4F25AB3A3F5E /* WatchTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerView.swift; sourceTree = "<group>"; };
+		CE157D432CEE5CA89ABF71D5 /* SequenceTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceTimerViewModel.swift; sourceTree = "<group>"; };
+		D390A4FA43D63E0D2C40F586 /* SessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTests.swift; sourceTree = "<group>"; };
+		E5F8CB6B19E346D70F883826 /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
+		E7D58EB4288C2BD173CA05B8 /* UpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
+		FB2B254C9C67EC050AD1DF1A /* PremiumFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumFeature.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		15B8D34C132ABCC32661099A /* HabitCoachWatch */ = {
+			isa = PBXGroup;
+			children = (
+				9E2F4276F21F544B5E80C378 /* Assets.xcassets */,
+				76115EB7147F485F80B5F64F /* HabitCoachWatch.entitlements */,
+				0E3BD85C4C9CF52DF1BE85F1 /* HabitCoachWatchApp.swift */,
+				4C430D42A37CF3B80330F914 /* PrivacyInfo.xcprivacy */,
+				7DBF71A1561162C94F60D9C5 /* ViewModels */,
+				3D60BAFF7012FB98D3FA60FB /* Views */,
+			);
+			path = HabitCoachWatch;
+			sourceTree = "<group>";
+		};
+		3D60BAFF7012FB98D3FA60FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83F6D3FDBF1E0561D2E1D643 /* WatchPresetListView.swift */,
+				21A17BC4ECD810C5A0F8050B /* WatchSequenceTimerView.swift */,
+				C8C432AF981B4F25AB3A3F5E /* WatchTimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52950574EA118D73AAF5D27D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE157D432CEE5CA89ABF71D5 /* SequenceTimerViewModel.swift */,
+				55C035D7419052E54813B2CC /* TimerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		57682CDBFB378BE0845AA7A4 = {
+			isa = PBXGroup;
+			children = (
+				DDE813F6192FC1BF407234C3 /* HabitCoach */,
+				A7519C5076C47E1F5B4D17B6 /* HabitCoachTests */,
+				15B8D34C132ABCC32661099A /* HabitCoachWatch */,
+				ABEECF15D87857841D5B9B0F /* Shared */,
+				89CFFBC4F363C5EED6ECE04D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DBF71A1561162C94F60D9C5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0F5DDA2ED9087B740F81A7CE /* WatchTimerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		89CFFBC4F363C5EED6ECE04D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000E20EBB135A9D45306A0C3 /* HabitCoach.app */,
+				C21669F0F6FA1166264AB565 /* HabitCoachTests.xctest */,
+				267F4C8278A17F4FFDA8D563 /* HabitCoachWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AFF62E2627A77064525F503 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				61BC8A51DFCCE59D31B9DEB6 /* AudioService.swift */,
+				BD075C4990DCE1D3B032CEBB /* ConnectivityService.swift */,
+				50DB634ABE8381D9F3D8037F /* HapticService.swift */,
+				58EAE9514A2F2A95B3F4A71C /* MorsePlayer.swift */,
+				E5F8CB6B19E346D70F883826 /* ProfileStore.swift */,
+				9532A15E15828E8021F74210 /* PurchaseManager.swift */,
+				9B2775F4634E942BC8629EE0 /* SequenceStore.swift */,
+				17DEBA9073FECDD5CA4A5902 /* SessionStore.swift */,
+				186FB9A1579A13055B9CBF9C /* ThemeManager.swift */,
+				B674048A45327CB76815739F /* TimerService.swift */,
+				A898C9C883B38A359281A0BC /* WorkoutManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A7286DBDDF3C94A1399572BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B02541170D32D09D2053B8D7 /* OnboardingView.swift */,
+				08AF5EE34206B20849CDB1FA /* PrivacyPolicyView.swift */,
+				A0204DA37F2010AC8D775996 /* ProfileEditView.swift */,
+				0731394DB1549E2653685599 /* ProfileListView.swift */,
+				0D6AF292D9A92CCB881279C5 /* SequenceEditView.swift */,
+				A8E3B62D1EF48CFC1E079411 /* SequenceListView.swift */,
+				3EF27EDC5CF66A20E6AC1D9B /* SequenceTimerView.swift */,
+				6A4C514AF87C85D3CAAE004B /* SessionHistoryView.swift */,
+				7F89587665CFCBB375AF3C4F /* SettingsView.swift */,
+				83D73FD71E18DC8F256C3CAD /* TimerPresetPickerView.swift */,
+				59798E4411EB5EB81B12B9ED /* TimerView.swift */,
+				E7D58EB4288C2BD173CA05B8 /* UpgradeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7519C5076C47E1F5B4D17B6 /* HabitCoachTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E987E8FE9DC95C516D33AD7 /* EndConditionTests.swift */,
+				8384D60F15DFF9F28DAB57E3 /* HapticPatternTests.swift */,
+				4664EF3F851C6C9BE3B78B2E /* MorsePlayerTests.swift */,
+				AD4733C52E1A1DC10DB17948 /* SequenceTests.swift */,
+				35CDAAA553781211886299B1 /* SessionProfileTests.swift */,
+				AA559278D656B1884795C1D4 /* SessionSettingsTests.swift */,
+				D390A4FA43D63E0D2C40F586 /* SessionTests.swift */,
+				9FA6C339F09A987826C230BC /* TimerServiceTests.swift */,
+			);
+			path = HabitCoachTests;
+			sourceTree = "<group>";
+		};
+		ABEECF15D87857841D5B9B0F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DDD675E6789867F22CAEC1C9 /* Models */,
+				8AFF62E2627A77064525F503 /* Services */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DDD675E6789867F22CAEC1C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78B26A0109C6B9FC54FB37A5 /* AppTheme.swift */,
+				61D68187CF517F6F070A610E /* HapticPattern.swift */,
+				FB2B254C9C67EC050AD1DF1A /* PremiumFeature.swift */,
+				5153D191CB58BB8273825621 /* Session.swift */,
+				1550C13F30044BF3E3DAA0D9 /* SessionProfile.swift */,
+				AF141E92D9B2D99C32D269E3 /* SessionSequence.swift */,
+				BAB93D531C4F726C0AFE4A1F /* SessionSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDE813F6192FC1BF407234C3 /* HabitCoach */ = {
+			isa = PBXGroup;
+			children = (
+				1CD7DFE9609A44FC0E58DD2E /* Assets.xcassets */,
+				77BFE98A3159C1E9F88FB71A /* ContentView.swift */,
+				250705BE2579C896DF23785F /* HabitCoach.entitlements */,
+				579BD49BAA601A230CCFDC0B /* HabitCoachApp.swift */,
+				729141F0F0603EF3D8C491C9 /* Info.plist */,
+				4236C8ACC6F2C2ED1C77150A /* PrivacyInfo.xcprivacy */,
+				159B4D07764F185C1EAB832F /* StoreKit.storekit */,
+				52950574EA118D73AAF5D27D /* ViewModels */,
+				A7286DBDDF3C94A1399572BD /* Views */,
+			);
+			path = HabitCoach;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36E3F146BEEABC4DB85D7DE3 /* HabitCoachWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F91C24575ACEDD34478129BA /* Build configuration list for PBXNativeTarget "HabitCoachWatch" */;
+			buildPhases = (
+				85F086868FD37DFF71B9561E /* Sources */,
+				4BD465C02D21C70387B986FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HabitCoachWatch;
+			packageProductDependencies = (
+			);
+			productName = HabitCoachWatch;
+			productReference = 267F4C8278A17F4FFDA8D563 /* HabitCoachWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57B062DFF072A2D94FAAFB96 /* HabitCoachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12D42D6989E28C956C87CD0C /* Build configuration list for PBXNativeTarget "HabitCoachTests" */;
+			buildPhases = (
+				1DBB3AE00FB1BD647AF6024A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				635D1A8FC4A3E6CB9157837E /* PBXTargetDependency */,
+			);
+			name = HabitCoachTests;
+			packageProductDependencies = (
+			);
+			productName = HabitCoachTests;
+			productReference = C21669F0F6FA1166264AB565 /* HabitCoachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0F30F48BCDD5A3668F94928 /* HabitCoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F75B628A8194407B5060CEF /* Build configuration list for PBXNativeTarget "HabitCoach" */;
+			buildPhases = (
+				15F9A75F171B4C373F3ECDEA /* Sources */,
+				A9204DAA0E81DBD00929E5A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HabitCoach;
+			packageProductDependencies = (
+			);
+			productName = HabitCoach;
+			productReference = 000E20EBB135A9D45306A0C3 /* HabitCoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		101140A7AACFD26920FC007E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					36E3F146BEEABC4DB85D7DE3 = {
+						DevelopmentTeam = TJAC78FFA8;
+					};
+					57B062DFF072A2D94FAAFB96 = {
+						DevelopmentTeam = TJAC78FFA8;
+					};
+				};
+			};
+			buildConfigurationList = D99BBDFA09D918EF874374AD /* Build configuration list for PBXProject "HabitCoach" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 57682CDBFB378BE0845AA7A4;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0F30F48BCDD5A3668F94928 /* HabitCoach */,
+				57B062DFF072A2D94FAAFB96 /* HabitCoachTests */,
+				36E3F146BEEABC4DB85D7DE3 /* HabitCoachWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BD465C02D21C70387B986FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB748CB9FD6FE2AE1DEFDD1 /* Assets.xcassets in Resources */,
+				DA255C75283E79AA4C61FC0C /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9204DAA0E81DBD00929E5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9E584D2D8A25FD27625414 /* Assets.xcassets in Resources */,
+				67709513DCC45E5CE2D00E14 /* PrivacyInfo.xcprivacy in Resources */,
+				F4094E30B79D304AD0D5D692 /* StoreKit.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15F9A75F171B4C373F3ECDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5572163EE87E365C37076FA6 /* AppTheme.swift in Sources */,
+				EAA8370EECEB99B4E14F0298 /* AudioService.swift in Sources */,
+				768B7AA67820E94ED6610A87 /* ConnectivityService.swift in Sources */,
+				5FD008B0CBA54C5841BC1F1E /* ContentView.swift in Sources */,
+				2DC708A64E92EF2D2C104BBD /* HabitCoachApp.swift in Sources */,
+				5575F4C7FEB1F682BD6F301F /* HapticPattern.swift in Sources */,
+				EBF1A5C9C058FDEE626BF697 /* HapticService.swift in Sources */,
+				2E45A8899ED528FA66AB058C /* MorsePlayer.swift in Sources */,
+				F2547D7AFD62A0047F44F9F6 /* OnboardingView.swift in Sources */,
+				78E1C175447F031606C8325E /* PremiumFeature.swift in Sources */,
+				6F6DE60907E8C5A9D1CD1CA3 /* PrivacyPolicyView.swift in Sources */,
+				860BB2FE7E6EC50CFC51B558 /* ProfileEditView.swift in Sources */,
+				1E85A92228C7896E84CD0C3F /* ProfileListView.swift in Sources */,
+				5A5722C41DE6C1D545D3DD71 /* ProfileStore.swift in Sources */,
+				EBF77422D8CEF9E55EA5C072 /* PurchaseManager.swift in Sources */,
+				8B8A5154B3EB151B17EF7EB7 /* SequenceEditView.swift in Sources */,
+				4A8C4E93C559AD10AA62EA42 /* SequenceListView.swift in Sources */,
+				1B07747E38D16252196499B3 /* SequenceStore.swift in Sources */,
+				79825A573CC29F08040CC70F /* SequenceTimerView.swift in Sources */,
+				213DB74577729ACD3061D41B /* SequenceTimerViewModel.swift in Sources */,
+				21E2E353FE60F921A3D37F91 /* Session.swift in Sources */,
+				183DCDBE38E705E06D55DFAD /* SessionHistoryView.swift in Sources */,
+				808B5C31608594D33D73CF6C /* SessionProfile.swift in Sources */,
+				D139037BD3BC73FCDBF1191C /* SessionSequence.swift in Sources */,
+				178C8FB165F1ED13F4610558 /* SessionSettings.swift in Sources */,
+				06079F31956F06F13EBE5B2B /* SessionStore.swift in Sources */,
+				2131F136B880CE959E5FB764 /* SettingsView.swift in Sources */,
+				3E112C6C11E722244C5E5083 /* ThemeManager.swift in Sources */,
+				3F6BE2396EE863948EEF3C49 /* TimerPresetPickerView.swift in Sources */,
+				C24929B64D62DF53086A0F65 /* TimerService.swift in Sources */,
+				DC8C0C93861BBB3A1F2074DD /* TimerView.swift in Sources */,
+				5263AF8F96C15184456AAD4D /* TimerViewModel.swift in Sources */,
+				95EA9FE35D1946D43039F0FD /* UpgradeView.swift in Sources */,
+				C6F7FE5931EFD73850B13FA8 /* WorkoutManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DBB3AE00FB1BD647AF6024A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DC767B35138310FB6E539DD /* AppTheme.swift in Sources */,
+				AA0495DF510892B83B042895 /* AudioService.swift in Sources */,
+				5DB8A7D79D2F4DEB230E979D /* ConnectivityService.swift in Sources */,
+				5CC637C11AECE71A071C696E /* EndConditionTests.swift in Sources */,
+				C5658A2651C9330A81800966 /* HapticPattern.swift in Sources */,
+				A61B0626BD232E462678C6FC /* HapticPatternTests.swift in Sources */,
+				060F2C9C33B9F61DAB023B1C /* HapticService.swift in Sources */,
+				8F74963BAB14DB732E9F3C33 /* MorsePlayer.swift in Sources */,
+				8CCA39F49B2B964758A58699 /* MorsePlayerTests.swift in Sources */,
+				118505D045F45A2E6B016108 /* PremiumFeature.swift in Sources */,
+				C212D674154E2F011AA30D02 /* ProfileStore.swift in Sources */,
+				A62B14C76B678B7CF62378FA /* PurchaseManager.swift in Sources */,
+				B7CDC19D94FDBDB1BA5C5DAA /* SequenceStore.swift in Sources */,
+				62754A6AC83F5C20FDB47C34 /* SequenceTests.swift in Sources */,
+				7C7188882C6CB15E64731F49 /* Session.swift in Sources */,
+				3DD397F466C42C732D35570C /* SessionProfile.swift in Sources */,
+				1174EDBDEB885560C9DD46DE /* SessionProfileTests.swift in Sources */,
+				EB2F220ADC77A7AF91A4C04B /* SessionSequence.swift in Sources */,
+				40D310F86B86C3F739B0B861 /* SessionSettings.swift in Sources */,
+				33AA852C26C3B7FB87ECE531 /* SessionSettingsTests.swift in Sources */,
+				8D8449F898213680A932D883 /* SessionStore.swift in Sources */,
+				5B95DB073BCBCE4538A9FB44 /* SessionTests.swift in Sources */,
+				9CC6394DF15F32FF718FD3A9 /* ThemeManager.swift in Sources */,
+				E5F12E64D57CDF4C2275DDF0 /* TimerService.swift in Sources */,
+				4F199B297D2365024E4AC169 /* TimerServiceTests.swift in Sources */,
+				6E5A145342B474A24D97E261 /* WorkoutManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85F086868FD37DFF71B9561E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D070A41601A9C1252F68C05B /* AppTheme.swift in Sources */,
+				6E32295D8A5C79657949A400 /* AudioService.swift in Sources */,
+				56A60E10215A4F761224684A /* ConnectivityService.swift in Sources */,
+				F265DEE555C3DBFC21776AE0 /* HabitCoachWatchApp.swift in Sources */,
+				6A610A2F3DA386DE20DED501 /* HapticPattern.swift in Sources */,
+				76E8A1705A7A2AA62F5BB536 /* HapticService.swift in Sources */,
+				50FE3612C8492659481BE3B1 /* MorsePlayer.swift in Sources */,
+				95116D9CAF7F78218C9BBEE8 /* PremiumFeature.swift in Sources */,
+				832DB49C686847E8A7F37333 /* ProfileStore.swift in Sources */,
+				BB6D5C55E389DD86CFE1429E /* PurchaseManager.swift in Sources */,
+				776519D85A627DFDC270E344 /* SequenceStore.swift in Sources */,
+				7461DBFA4DFD15BEA5E16672 /* Session.swift in Sources */,
+				C95BFE51482F6135BD8F3129 /* SessionProfile.swift in Sources */,
+				CB8B9EA35D0C1B0AF4F7258B /* SessionSequence.swift in Sources */,
+				45E9DF0C1FFD910B725CE8F7 /* SessionSettings.swift in Sources */,
+				2143193E036DD9C6C62F7F0F /* SessionStore.swift in Sources */,
+				F39256D9336BA645A2EBF4E4 /* ThemeManager.swift in Sources */,
+				34AE0DE1D7C5A88ECEB6F796 /* TimerService.swift in Sources */,
+				BE0D7C1E63E264530CC7E963 /* WatchPresetListView.swift in Sources */,
+				F3387B23291142ED11776552 /* WatchSequenceTimerView.swift in Sources */,
+				E4CBABDAF265AD2DD007D7B2 /* WatchTimerView.swift in Sources */,
+				EF8B44F5528C771C01F1CC49 /* WatchTimerViewModel.swift in Sources */,
+				5D5C2FFFE3C333E3C6467418 /* WorkoutManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		635D1A8FC4A3E6CB9157837E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0F30F48BCDD5A3668F94928 /* HabitCoach */;
+			targetProxy = D51251802055A56E9FD20604 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28F0C482FD9AD8099CE6E829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctuckersolutions.habitcoach.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HabitCoach.app/HabitCoach";
+			};
+			name = Debug;
+		};
+		489AC31012941D65A0534A4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HabitCoach/HabitCoach.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = TJAC78FFA8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitCoach/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitCoach;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctuckersolutions.habitcoach;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "HabitCoach Distribution";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5217C39B80A89480A8055065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctuckersolutions.habitcoach.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HabitCoach.app/HabitCoach";
+			};
+			name = Release;
+		};
+		66313A558BD8B8F569B434F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TJAC78FFA8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		C112DE0320FD042E2284CEA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TJAC78FFA8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		CBC26A73CF463E676D5AE623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HabitCoach/HabitCoach.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = TJAC78FFA8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitCoach/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitCoach;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctuckersolutions.habitcoach;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "HabitCoach Distribution";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4A5D3DBFB976A2CCF36830E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HabitCoachWatch/HabitCoachWatch.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitCoach;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "HabitCoach uses HealthKit workout sessions to deliver haptic reminders while your wrist is down.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "HabitCoach saves your coaching sessions as workouts to keep reminders active in the background.";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ctuckersolutions.habitcoach;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctuckersolutions.habitcoach.watch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		DDD784E6FC89933C52C9419F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HabitCoachWatch/HabitCoachWatch.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitCoach;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "HabitCoach uses HealthKit workout sessions to deliver haptic reminders while your wrist is down.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "HabitCoach saves your coaching sessions as workouts to keep reminders active in the background.";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ctuckersolutions.habitcoach;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctuckersolutions.habitcoach.watch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12D42D6989E28C956C87CD0C /* Build configuration list for PBXNativeTarget "HabitCoachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F0C482FD9AD8099CE6E829 /* Debug */,
+				5217C39B80A89480A8055065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3F75B628A8194407B5060CEF /* Build configuration list for PBXNativeTarget "HabitCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC26A73CF463E676D5AE623 /* Debug */,
+				489AC31012941D65A0534A4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D99BBDFA09D918EF874374AD /* Build configuration list for PBXProject "HabitCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C112DE0320FD042E2284CEA8 /* Debug */,
+				66313A558BD8B8F569B434F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F91C24575ACEDD34478129BA /* Build configuration list for PBXNativeTarget "HabitCoachWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A5D3DBFB976A2CCF36830E /* Debug */,
+				DDD784E6FC89933C52C9419F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 101140A7AACFD26920FC007E /* Project object */;
+}
